@@ -1,14 +1,5 @@
 <?php
-foreach (scandir(dirname(__FILE__).'/vendor/oop/') as $filename) {
-    $except = array("inc", "php");
-    $imp = implode('|', $except);
-    if (preg_match('/^.*\.(' . $imp . ')$/i', $filename)) {
-        $file = '/vendor/oop/' . $filename;
-        include $file;
-        echo $file;
-        echo '<br>';
-    }
-}
+include_once 'vendor/includes.inc';
 /**
  * Created by PhpStorm.
  * User: hajre
@@ -20,4 +11,16 @@ class Index{
 }
 $h = new House();
 
-echo $h->name;
+//echo $h->name;
+//echo '<br>';
+//echo $h->age;
+//echo '<br>';
+//echo $h->hello();
+
+
+//$h = new Visibility();
+//echo $h->name;
+//$dor = new Dor();
+//echo $dor->name();
+//$hause = new Visibility();
+//echo $hause->hauseName();
