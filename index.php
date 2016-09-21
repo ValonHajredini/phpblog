@@ -9,7 +9,18 @@ include_once 'vendor/includes.inc';
 class Index{
 
 }
+class players extends Cauntries{
+    public $player1 = "Valon Hjredini";
+    public $player2 = "Endrit Gojani";
+    public $player3 = "Ilir Gojani";
+    public $player4 = "Fitim Gashi";
 
+    public function player(){
+        return $this->player1. " Is from ". $this->al;
+    }
+}
+$player = new players();
+echo $player->player();
 //$new = new This();
 //echo $new->fullname();
 //$h = new House();
@@ -33,4 +44,4 @@ class Index{
 //window::newName();
 // Constant variable on e class
 //echo constantClass::name;
-echo namee;
+//echo namee;
