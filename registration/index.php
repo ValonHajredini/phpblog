@@ -14,6 +14,8 @@
     //        echo '<br>';
             }
         }
+        $link = new Connect();
+
     ?>
 <!--    <link rel="stylesheet" href="assets/css/main.css">-->
 </head>
@@ -27,8 +29,11 @@
             <input type="email" name="email" id="email" required="required">
             <label for="pass">User Password</label>
             <input type="password" name="pass" id="pass" required="required">
-            <input type="submit" value="Sign Up">
+            <input type="submit" name="register" value="Sign Up">
         </form>
     </div>
 </body>
 </html>
+<?php
+$new = new Connect();
+?>

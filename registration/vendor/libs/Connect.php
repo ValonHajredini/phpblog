@@ -8,5 +8,17 @@
  */
 class Connect
 {
+    public $host        = 'localhost';
+    public $user        = 'root';
+    public $password    = 'password';
+    public $db_name     = 'oop_db';
+    public $link;
+    public function __construct(){
+        $this->connect();
+    }
 
+    private function connect(){
+        $this->link = new mysqli($this->host, $this->user, $this->password, $this->db_name);
+
+    }
 }
