@@ -9,7 +9,10 @@ include_once 'vendor/includes.inc';
 class Index{
 
 }
-$h = new House();
+
+$new = new This();
+echo $new->fullname();
+//$h = new House();
 
 //echo $h->name;
 //echo '<br>';
