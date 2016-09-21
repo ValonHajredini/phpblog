@@ -1,0 +1,26 @@
+body{
+    margin:0px;
+    padding:0px;
+    background: silver;
+}
+#form{
+    width:30%;
+    height:400px;
+    background: white;
+    margin:0px auto;
+    padding:20px;
+    border:2px solid black;
+}
+input{
+    width:200px;
+    height:30px;
+    margion:5px;
+    display: block;
+
+}
+label{
+    margin:5px auto;
+
+    font-weight: bold;
+
+}
