@@ -10,8 +10,8 @@ class Index{
 
 }
 
-$new = new This();
-echo $new->fullname();
+//$new = new This();
+//echo $new->fullname();
 //$h = new House();
 
 //echo $h->name;
@@ -27,6 +27,10 @@ echo $new->fullname();
 //echo $dor->name();
 //$hause = new Visibility();
 //echo $hause->hauseName();
-echo door::$name;
-door::fullname();
-window::newName();
+// Static Values
+//echo door::$name;
+//door::fullname();
+//window::newName();
+// Constant variable on e class
+//echo constantClass::name;
+echo namee;
