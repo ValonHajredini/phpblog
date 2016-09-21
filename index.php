@@ -27,3 +27,6 @@ echo $new->fullname();
 //echo $dor->name();
 //$hause = new Visibility();
 //echo $hause->hauseName();
+echo door::$name;
+door::fullname();
+window::newName();

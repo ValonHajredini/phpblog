@@ -8,7 +8,7 @@
  */
 class htmlForms
 {
-    public function Form(array $attributes){
+    static function Form(array $attributes){
         $output = "<form ";
         foreach ($attributes as $attr=>$value):
             $output .= $attr.'="'.$value.'"';
@@ -16,12 +16,12 @@ class htmlForms
         $output .= ">";
         echo $output;
     }
-    public function endForm(){
+    static function endForm(){
         echo '</form>';
     }
 
 
-    public function submitField(array $attributes){
+    static function submitField(array $attributes){
         $output = '<input type="submit" ';
         foreach ($attributes as $key=>$value):
             $output .= $key.'="'.$value.'"';
@@ -30,7 +30,7 @@ class htmlForms
         echo $output;
     }
     /**  Input field => text;   */
-   public function textField($name=null,$class=null, $value=null, array $other_attr=null, $id=null)
+   static function textField($name=null,$class=null, $value=null, array $other_attr=null, $id=null)
     {
         $id         = !is_null($id)         ? 'id="' . $id . '"'        : 'id="' . $name . '_field"';
         $name       = !is_null($name)       ? 'name="' . $name . '"'    : null;
@@ -47,7 +47,7 @@ class htmlForms
         echo $output;
     }
     /**  Input field => email;   */
-    public function emailField($name=null,$class=null, $value=null, array $other_attr=null, $id=null)
+    static function emailField($name=null,$class=null, $value=null, array $other_attr=null, $id=null)
     {
         $id         = !is_null($id)         ? 'id="' . $id . '"'        : 'id="' . $name . '_field"';
         $name       = !is_null($name)       ? 'name="' . $name . '"'    : null;
@@ -64,7 +64,7 @@ class htmlForms
         echo $output;
     }
     /**  Input field => email;   */
-    public function passwordField($name=null,$class=null, $value=null, array $other_attr=null, $id=null)
+    static function passwordField($name=null,$class=null, $value=null, array $other_attr=null, $id=null)
     {
         $id         = !is_null($id)         ? 'id="' . $id . '"'        : 'id="' . $name . '_field"';
         $name       = !is_null($name)       ? 'name="' . $name . '"'    : null;
