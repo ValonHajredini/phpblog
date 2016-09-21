@@ -9,8 +9,15 @@ include_once 'vendor/includes.inc';
 class Index{
 
 }
-$wali = new magicFunctiones();
-$wali->hello();
+$dog    = new Dog();
+$cat    = new Cat();
+$camel  = new Camel();
+echo $dog->name . ' price: '. $dog->price . '<br>';
+echo $cat->name . ' price: '. $cat->price . '<br>';
+echo $camel->name . ' price: '. $camel->price . '<br>';
+
+//$wali = new magicFunctiones();
+//$wali->hello();
 //class players extends Cauntries{
 //    public $player1 = "Valon Hjredini";
 //    public $player2 = "Endrit Gojani";
