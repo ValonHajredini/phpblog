@@ -6,5 +6,6 @@ define ('DB_PASSWORD','password');
 define ('DB_NAME','phpblog');
 // Thirrja e Clases Database
 include 'Database.php';
-// Instacncimi ( Krijimi ) i objekteve
-$db = new Database();
+// Thirrja e Querive dhe instancimit te databazes
+include 'Queries.php';
+
