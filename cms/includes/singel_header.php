@@ -8,7 +8,11 @@
 
 
 
-
+if(!isset($_GET['post_id'])){
+    header('Location:index.php');
+}else{
+    $post_id = $_GET['post_id'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,10 +38,10 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
-            <a class="blog-nav-item active" href="index.php">Home</a>
+            <a class="blog-nav-item " href="index.php">Home</a>
             <a class="blog-nav-item" href="#">New features</a>
             <a class="blog-nav-item" href="#">Press</a>
-            <a class="blog-nav-item" href="#">New hires</a>
+            <a class="blog-nav-item active" href="#">Singel post</a>
             <a class="blog-nav-item" href="#">About</a>
         </nav>
     </div>
@@ -53,20 +57,21 @@
     <div class="row">
 
         <div class="col-sm-8 blog-main">
-            <?php foreach($posts as $post):?>
-            <div class="blog-post">
-                <h2 class="blog-post-title"><?php echo $post['title']; ?></h2>
-                <p class="blog-post-meta"><?php echo date("F j, Y, g:i a", strtotime($post['date']))?>, Form: <a href="#"><?php echo $post['author']?></a></p>
-                <img src="assets/images/<?php echo  $post['image']?>" alt="<?php echo $post['title']; ?> image" class="post_img">
-                <p class="content"><?php echo substr($post['content'],0,270); ?></p>
-                <a href="singel_post.php?post_id=<?php echo $post['id']?>" class=" btn btn-default align-right" >Read more...</a>
+                <?php foreach ($singer_post as $the_post):?>
+                <div class="blog-post">
+                    <h2 class="blog-post-title"><?php echo $the_post['title']; ?></h2>
+                    <p class="blog-post-meta"><?php echo date("F j, Y, g:i a", strtotime($the_post['date']))?>, Form: <a href="#"><?php echo $the_post['author']?></a></p>
+                    <img src="assets/images/<?php echo  $the_post['image']?>" alt="<?php echo $the_post['title']; ?> image" class="post_img_full">
+                    <p class="content"><?php echo $the_post['content']; ?></p>
+                    <a href="index.php" class=" btn btn-default align-right" >Back to all posts!</a>
 
-<!--                <pre><code>Example code block</code></pre>-->
+                    <!--                <pre><code>Example code block</code></pre>-->
 
 
-            </div><!-- /.blog-post -->
+                </div><!-- /.blog-post -->
                 <hr>
             <?php endforeach; ?>
+
 
             <!--            <nav>-->
             <!--                <ul class="pager">-->

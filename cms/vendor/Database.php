@@ -33,6 +33,7 @@ class Database{
             return false;
         }
     }
+
     public function insert($query){
         $insert = $this->link->query($query);
         if ($insert){

@@ -6,10 +6,10 @@
     <div class="sidebar-module">
         <h4>CAtegories</h4>
         <ol class="list-unstyled">
-            <li><a href="#">PHP & MYSQL</a></li>
-            <li><a href="#">HTML & CSS</a></li>
-            <li><a href="#">JAVASCRIPT & JQUERY</a></li>
+            <?php foreach($categories as $category):?>
+            <li><a href="index.php?category_id=<?php echo $category['id']?>"><?php echo $category['title']?></a></li>
 
+            <?php endforeach;?>
         </ol>
     </div>
 

@@ -1,0 +1,25 @@
+.post_img{
+    float: left;
+    margin-right:20px;
+    margin-bottom:10px;
+    width:400px;
+    padding:4px;
+    border:1px solid silver;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+.post_img_full{
+    width:100%;
+    padding:4px;
+    border:1px solid silver;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+.content{
+    text-align: justify;
+}
+.align-right{
+    float:right;
+}
