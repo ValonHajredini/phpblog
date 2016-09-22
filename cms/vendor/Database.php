@@ -25,4 +25,36 @@ class Database{
                                 $this->db_name
                                 );
     }
+    public  function  select($query){
+        $result = $this->link->query($query);
+        if ($result->num_rows > 0){
+            return $result;
+        }else{
+            return false;
+        }
+    }
+    public function insert($query){
+        $insert = $this->link->query($query);
+        if ($insert){
+            header('Location: index.php?insert=Post inserted');
+        } else{
+          echo "Post did not insert";
+        }
+    }
+    public function update($query){
+        $update = $this->link->query($query);
+        if ($update){
+            header('Location: index.php?update=Post Updated');
+        } else{
+            echo "Post did not Updated";
+        }
+    }
+    public function delete($query){
+        $delete = $this->link->query($query);
+        if ($delete){
+            header('Location: index.php?delete=Post deleted');
+        } else{
+            echo "Post did not Deleted";
+        }
+    }
 }
