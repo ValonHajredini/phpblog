@@ -21,7 +21,13 @@
 </head>
 <body>
     <div id="form">
-        <h2>Register Form</h2>
+        <h2>Register Form
+            <?php
+                if(isset($_GET['success'])){
+                echo $_GET['success'];
+                }
+            ?>
+        </h2>
         <form action="process.php" method="POST" >
             <label for="username">User Name</label>
             <input type="text" name="username" id="username" required="required">

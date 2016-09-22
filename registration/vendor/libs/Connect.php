@@ -21,4 +21,13 @@ class Connect
         $this->link = new mysqli($this->host, $this->user, $this->password, $this->db_name);
 
     }
+    public function insert($query){
+        $result = $this->link->query($query);
+        if ($result){
+            return true;
+        } else {
+            return false;
+
+        }
+    }
 }
